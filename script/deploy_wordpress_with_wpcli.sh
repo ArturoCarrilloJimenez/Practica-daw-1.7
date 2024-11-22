@@ -56,7 +56,14 @@ wp rewrite structure '/%postname%/' \
 # Copiamos el contenido de .htacces a /var/www/html
 cp ../htaccess/.htaccess /var/www/html
 
+# Instalamos un tema y lo activamos
+wp theme install mindscape --activate --path=/var/www/html --allow-root
+
+# Instlamos un plugin y lo activamos
+wp plugin install wps-hide-login --activate --path=/var/www/html --allow-root
+
+# Configuramos el plagin
+wp option update whl_page "$WHP_PAGE" --path=/var/www/html --allow-root
+
 # Modificamos el propoietario y el grupo de /var/www/html
 chown -R www-data:www-data /var/www/html
-
-
