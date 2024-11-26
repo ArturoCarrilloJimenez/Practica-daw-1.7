@@ -59,7 +59,7 @@ cp ../htaccess/.htaccess /var/www/html
 # Instalamos un tema y lo activamos
 wp theme install mindscape --activate --path=/var/www/html --allow-root
 
-# Instlamos un plugin y lo activamos
+# Instalamos un plugin y lo activamos
 wp plugin install wps-hide-login --activate --path=/var/www/html --allow-root
 
 # Configuramos el plugin
